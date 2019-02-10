@@ -1,10 +1,17 @@
-TypeScript Webpack Base Project Lastest
-=======================================
-
-Always update with latest versions and technologies.
+TypeScript Webpack Exclude "fs" Demo
+====================================
 
 ```
 npm install
-npm run dev
+npm run demo
 ```
 
+原理是利用webpack的`alias`将`fs`替换为本地的另一个假的：
+
+```
+resolve: {
+  alias: {
+    "fs": "./dummy-fs"
+  }
+}
+```

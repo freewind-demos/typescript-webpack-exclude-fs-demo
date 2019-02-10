@@ -1,5 +1,5 @@
 import {Configuration} from 'webpack';
-import HtmlWebpackPlugin = require("html-webpack-plugin");
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config: Configuration = {
   mode: 'development',
@@ -10,7 +10,10 @@ const config: Configuration = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
+    alias: {
+      "fs": "./dummy-fs"
+    }
   },
   module: {
     rules: [
